@@ -1,0 +1,80 @@
+from datetime import datetime
+
+d = {}
+d[1] = {}
+d[1]['girl'] = 'Hey How are you doing?'
+d[1]['time'] = '11:22:00'
+
+d[2] = {}
+d[2]['guy'] = 'Hey How are you doing?'
+d[2]['time'] = '11:33:00'
+d[3] = {}
+d[3]['girl'] = 'Im good how are you doing'
+d[3]['time'] = '11:34:00'
+d[4] = {}
+d[4]['guy'] = 'Ok, whatsup'
+d[4]['time'] = '11:54:00'
+d[5] = {}
+d[5]['girl'] = 'test'
+d[5]['time'] = '11:55:00'
+d[6] = {}
+
+d[6]['guy'] = 'test'
+d[6]['time'] = '12:01:00'
+d[7] = {}
+
+d[7]['girl'] = 'test'
+d[7]['time'] = '12:02:00'
+d[8] = {}
+d[8]['guy'] = 'test'
+d[8]['time'] = '12:05:00'
+
+
+d['OverallGrade'] = {}
+d['OverallGrade']['grade'] = 'A'
+
+print d
+message_list = 1
+i = 0
+time_spot = 0
+thetime = []
+for key,value in d.iteritems():
+
+    #print key
+    #print value
+    for key2,value2 in value.iteritems():
+        #print "message1: " + key2
+
+        #tbis is whos texting for this message
+        print key2
+        #this is the message
+        print value2
+        if i % 2 != 0:
+            print i
+            #this is the time
+            #print value2
+            thetime.append(value2)
+            print thetime[time_spot]
+            time_spot += 1
+        i += 1
+print thetime
+
+FMT = '%H:%M:%S'
+
+for x in thetime:
+    print x
+
+def time_difference(aftertime, beforetime):
+    tdelta = datetime.strptime(aftertime, FMT) - datetime.strptime(beforetime, FMT)
+    print tdelta
+
+        #print "time list"
+        #print "the time"
+        #if i % 2 == 0:
+        #    print thetime
+        #print len(thetime)
+            #thetime.append(value2)
+        #i +=2
+
+
+    #i += 1
